@@ -8,7 +8,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1920px;
   width: 100%;
 }
 
@@ -146,6 +146,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-top: 205px;
+  padding-left: 150px;
 }
 
 .line {
@@ -242,4 +243,19 @@ header {
 }
 .photos {
   display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 160px;
+  width: 100%;
+}
+.photos__item {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 92px;
+  left: 100px;
+  max-width: 793px;
+  height: 623px;
+  z-index: 1;
+  gap: 45px;
 }

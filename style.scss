@@ -1,4 +1,49 @@
 .photos {
-    display: flex;
-    flex-direction: column;
+&__text-container {
+    width: 1144px;
+    height: 580px;
+    background-color: #fab2234f;
 }
+&__line {
+    margin-bottom: 10px;
+}
+&__button {
+    margin-bottom: 30px;
+    width: 378px;
+    height: 84px;
+}
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 285px;
+        margin-top: 92px;
+        width: 430px;
+
+        &-title {
+            margin-bottom: 25px;
+            font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 67px;
+color: #333333;
+        }
+        &-par {
+            margin-bottom: 50px;
+            font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 21px;
+line-height: 32px;
+color: #333333;
+        }
+        &_instagram {
+         color: #797979;
+
+         &-link {
+            color: #FAB223;
+         }
+        }
+    }
+  } 
