@@ -1,9 +1,4 @@
-.header__logo {
-    height: 61px;
-    width: 208px;
-
-    &-lang {
-        width: 85px;
-        height: 37px;
-    }
+.photos {
+    display: flex;
+    flex-direction: column;
 }

@@ -97,7 +97,7 @@ header {
   color: #333333;
 }
 
-.button__header {
+.header__button {
   width: 280px;
   height: 74px;
 }
@@ -148,9 +148,7 @@ header {
   margin-top: 205px;
 }
 
-.about__start {}
-
-.about__line {
+.line {
   width: 92px;
   height: 0;
   border: 0;
@@ -241,4 +239,7 @@ header {
   font-weight: 500;
   font-size: 21px;
   line-height: 32px;
+}
+.photos {
+  display: flex;
 }
