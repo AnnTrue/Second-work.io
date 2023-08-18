@@ -535,15 +535,15 @@ img {
 }
 
 .tours__photo_item-1 {
-  background-image: url(../images/1_tours.png);
+  background-image: url(images/1_tours.png);
 }
 
 .tours__photo_item-2 {
-  background-image: url(../images/2_tours.png);
+  background-image: url(images/2_tours.png);
 }
 
 .tours__photo_item-3 {
-  background-image: url(../images/3_tours.png);
+  background-image: url(images/3_tours.png);
 }
 
 .carousel {
@@ -802,15 +802,15 @@ img {
 }
 
 .feedback__container_item_photo-first {
-  background-image: url(../images/1_person.png);
+  background-image: url(images/1_person.png);
 }
 
 .feedback__container_item_photo-second {
-  background-image: url(../images/2_person.png);
+  background-image: url(images/2_person.png);
 }
 
 .feedback__container_item_photo-third {
-  background-image: url(../images/3_person.png);
+  background-image: url(images/3_person.png);
 }
 
 .feedback__container_item-block {
@@ -1013,7 +1013,7 @@ img {
   padding: 678px 150px 89px 150px;
   background-position: center;
   background-size: cover;
-  background-image: url(../images/footer.png);
+  background-image: url(images/footer.png);
 }
 
 .footer__logo {
@@ -1176,7 +1176,7 @@ img {
 
 @media (max-width: 1600px) {
   header {
-    background-image: url(../images/header_1600.png);
+    background-image: url(images/header_1600.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1545,7 +1545,7 @@ img {
     line-height: 40px;
   }
   header {
-    background-image: url(../images/header_1600_1.png);
+    background-image: url(images/header_1600_1.png);
   }
   .hamburger-menu {
     display: block;

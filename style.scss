@@ -557,15 +557,15 @@ img {
             align-items: center;
 
             &-1 {
-                background-image: url(../images/1_tours.png);
+                background-image: url(images/1_tours.png);
             }
 
             &-2 {
-                background-image: url(../images/2_tours.png);
+                background-image: url(images/2_tours.png);
             }
 
             &-3 {
-                background-image: url(../images/3_tours.png);
+                background-image: url(images/3_tours.png);
             }
         }
     }
@@ -830,15 +830,15 @@ img {
                 background-size: cover;
 
                 &-first {
-                    background-image: url(../images/1_person.png);
+                    background-image: url(images/1_person.png);
                 }
 
                 &-second {
-                    background-image: url(../images/2_person.png);
+                    background-image: url(images/2_person.png);
                 }
 
                 &-third {
-                    background-image: url(../images/3_person.png);
+                    background-image: url(images/3_person.png);
                 }
             }
 
@@ -1053,7 +1053,7 @@ img {
     padding: 678px 150px 89px 150px;
     background-position: center;
     background-size: cover;
-    background-image: url(../images/footer.png);
+    background-image: url(images/footer.png);
 
     &__logo {
         display: flex;
@@ -1234,7 +1234,7 @@ img {
 
 @media (max-width: 1600px) {
     header {
-        background-image: url(../images/header_1600.png);
+        background-image: url(images/header_1600.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -1712,7 +1712,7 @@ img {
     }
 
     header {
-        background-image: url(../images/header_1600_1.png);
+        background-image: url(images/header_1600_1.png);
     }
 
     .hamburger-menu {
