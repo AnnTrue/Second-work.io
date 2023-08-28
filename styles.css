@@ -5,6 +5,9 @@
     text-decoration: none;
   
   }
+  body {
+    overflow-x: clip;
+  }
   
   .container {
     margin: 0 auto;
@@ -23,8 +26,8 @@
   .header {
     position: relative;
     color: white;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 150px;
+    padding-left: 150px;
   }
   
   .header-logo {
@@ -40,6 +43,150 @@
     height: 61px;
     width: 208px;
   }
+  
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+  .header__logo-lang {
+    margin-right: 100px;
+  }
+
+#app-cover {
+display: table;
+    counter-reset: button-counter;}
+
+.row {
+  display: table-row;
+}
+
+.toggle-button-cover {
+  display: table-cell;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.button-cover {
+}
+
+.button-cover:before {
+  counter-increment: button-counter;
+  content: counter(button-counter);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #d7e3e300;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px;
+}
+
+.button-cover,
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button-f {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+.button-f.r,
+.button-f.r .layer {
+      width: 85px;
+    height: 37px;
+  border-radius: 30px;
+}
+
+.button-f.b2 {
+  border-radius: 2px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+  color: #ffffff;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 25.5px;
+        padding: 8px 0 9px 10px;
+}
+
+.layer {
+  width: 100%;
+  background-color: #ebf7fc00;
+  transition: 0.3s ease all;
+  z-index: 1;
+      border: 2px solid white;
+          text-align: end;
+          padding: 5px 9px 0 10px;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 25.5px;
+}
+
+/* Button 1 */
+#button-1 .knobs:before {
+    content: "RU";
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 39px;
+    height: 28px;
+    color: #333;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 29.5px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 30px 10px 10px 30px;
+    font-weight: 400;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before {
+  content: "EN";
+  left: 41px;
+  background-color: #ffffff;
+  border-radius: 10px 30px 30px 10px;
+}
+
+#button-1 .checkbox:checked ~ .layer {
+  background-color: #fcfcfc00;
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+
   
   .header__logo_menu {
     display: flex;
@@ -60,11 +207,6 @@
   .header__logo_menu-text:hover {
     border-top: 2px solid #FAB223;
     color: #FAB223;
-  }
-  
-  .header__logo-lang {
-    width: 85px;
-    height: 37px;
   }
   
   .header__line {
@@ -117,21 +259,19 @@
     height: 74px;
   }
   
-  .header__img-video {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .header__img_video {
     position: absolute;
     width: 440px;
     height: 271px;
     top: 1050px;
     right: 150px;
-    background-image: url(images/imgVideo.png);
-    background-position: center;
-    background-size: cover;
     filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
   }
+
+  .header__img_video-content {
+  width: 100%;
+  height: 100%;
+}
   
   .header__img-play {
     width: 82px;
@@ -139,29 +279,19 @@
     background-image: url(images/play1.png);
     background-position: center;
     background-size: cover;
-    margin-top: 80px;
+    position: fixed;
+    left: 179px;
+    top: 80px;
+    background-color: #0000ff00;
+    border: none;
     cursor: pointer;
+    transition: 1s;
   }
   
   .header__img-play:hover {
     background-image: url(images/play_Hover.png);
     background-position: center;
     background-size: cover;
-  }
-  
-  .header__img-text_size-m {
-    margin-top: 22px;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 27px;
-  }
-  
-  .header__img-text_size-s {
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
   }
   
   .about {
@@ -210,7 +340,7 @@
   
   .about__text_line {
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 10px;
     padding-left: 40px;
     max-width: 990px;
     width: 100%;
@@ -227,7 +357,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    margin-top: 125px;
+    margin-top: 75px;
     max-width: 1200px;
     width: 100%;
     gap: 55px;
@@ -257,7 +387,7 @@
   }
   
   .about__video-icon {
-    margin-top: 92px;
+    margin-top: 84px;
     cursor: pointer;
   }
   

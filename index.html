@@ -38,16 +38,54 @@
                         <li><a class="menu__item" href="#click4">Связь с нами</a></li>
                     </ul>
                 </div>
-                <img class="header__logo-lang" src="images/lang.png" alt="lang">
+                <div class="header__logo-lang" id="app-cover">
+                    <div class="row">
+                        <div class="toggle-button-cover">
+                            <div class="button-cover">
+                                <div class="button-f r" id="button-1">
+                                    <input type="checkbox" class="checkbox" />
+                                    <div class="knobs">RU</div>
+                                    <div class="layer">EN</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <hr class="header__line">
             <p class="header__title_size-m">Раздвинь маленькую шторку, за которой скрывается целый мир!</p>
             <p class="header__title_size-s">Отдых, по всему миру, который вы заслужили</p>
             <button formaction="#" class="button header__button">Подробнее</button>
-            <div class="header__img-video">
-                <div class="header__img-play"></div>
-                <p class="header__img-text_size-m">20 км от Геленджика</p>
-                <p class="header__img-text_size-s">Чудесное скопление скал</p>
+            <div class="header__img_video">
+                <video id="video1" class="header__img_video-content" src="images/видео.mp4" controls
+                    poster="images/imgVideo.png">
+                    <source src="video.mp4" type="video/mp4">
+                    <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+                    <source src="video.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
+                    <source src="video.ogv" type="video/ogg">
+                    <!-- Ogg/Vorbis для старых версий браузеров Firefox и Opera -->
+                    <object data="video.swf"
+                        type="application/x-shockwave-flash"><!-- добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video -->
+                        <param name="movie" value="video.swf">
+                    </object>
+                </video>
+                <button class="header__img-play" onclick="playPause()"></button>
+                <script>
+                    var myVideo = document.getElementById("video1");
+
+
+                    function playPause() {
+                        if (myVideo.paused) {
+                            document.querySelector('.header__img-play').style.display = "none"
+                            myVideo.play();
+                        }
+
+                        else {
+                            document.querySelector('.header__img-play').style.display = "inherit"
+                            myVideo.pause();
+                        }
+                    }    
+                </script>
             </div>
         </div>
     </header>
@@ -85,10 +123,10 @@
                 повторно</span>
             <span class="about__item"><span class="about__item_orange">9</span> лет усердной работы</span>
         </div>
-        <div class="about__video">
+        <a class="about__video" href="#">
             <img class="about__video-icon" src="images/iconPlayorange.png" alt="">
             <span class="about__video-text text-par">Наша история в один клик</span>
-        </div>
+        </a>
     </section>
     <section class="photos container">
         <div class="background__color photos__background">
@@ -405,8 +443,10 @@
                 <input class="form__input" type="text" placeholder="Имя">
                 <input class="form__input" type="tel" placeholder="Телефон">
                 <button class="button form__button">Оставить заявку</button>
-                <label class="form__checkbox"><input type="checkbox">Даю соглашение на обработку персональных
-                    данных</label>
+                <div class="form__checkbox">
+                    <input type="checkbox" id="checkbox"> <label for="checkbox">Даю соглашение на обработку персональных
+                        данных</label>
+                </div>
             </div>
         </form>
     </section>
@@ -547,6 +587,7 @@
             <button class="button feedback__button">Читать все отзывы</button>
         </div>
     </section>
+    <div class="contacts__background_color"></div>
     <section class="contacts container">
         <span class="background contacts__background">Контакты</span>
         <div class="contacts__container">

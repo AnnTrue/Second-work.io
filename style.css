@@ -186,7 +186,7 @@ a {
 
 .photos {
   display: flex;
-  margin-top: 160px;
+  margin-top: 100px;
   position: relative;
 }
 
@@ -266,8 +266,8 @@ a {
 }
 
 .photos__background {
-  right: 0;
-  width: 1144px;
+  width: 100vw;
+  left: 776px;
   height: 580px;
   z-index: -1;
 }
@@ -416,7 +416,6 @@ img {
   flex-wrap: nowrap;
   height: 1229px;
   margin-top: 285px;
-  overflow: hidden;
 }
 
 .tours__text-container {
@@ -435,8 +434,8 @@ img {
 
 .tours__background_color {
   top: 323px;
-  left: 0;
-  width: 1412px;
+  width: 100vw;
+  right: 508px;
   height: 648px;
 }
 
@@ -465,7 +464,7 @@ img {
 
 .tours__media {
   margin-top: 70px;
-  padding-left: 29px;
+  padding: 13px 0 0 29px;
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 21px;
@@ -678,18 +677,13 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-right: 30px;
   top: 80px;
   left: 150px;
 }
 
-.form__text-title {
-  margin-bottom: 35px;
-  white-space: nowrap;
-}
-
 .form__text-par {
   margin-bottom: 160px;
-  white-space: nowrap;
 }
 
 .form__wrap {
@@ -701,8 +695,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  width: 100vw;
+  padding-left: 153px;
   height: 568px;
   background-color: #fab2234f;
 }
@@ -744,6 +738,75 @@ img {
   font-weight: 400;
   font-size: 14px;
   color: #797979;
+}
+
+.form input[type="checkbox"]:checked,
+.form input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.form input[type="checkbox"]:checked + label,
+.form input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.form input[type="checkbox"]:checked + label:before,
+.form input[type="checkbox"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #797979;
+  background-color: #ffffff;
+}
+
+.form input[type="checkbox"]:disabled + label::before {
+  background-color: #CDCDCD;
+}
+
+.form input[type="checkbox"]:checked:disabled + label:before {
+  background-color: #CDCDCD;
+}
+
+.form input[type="checkbox"]:checked + label:after,
+.form input[type="checkbox"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form input[type="checkbox"]:checked + label:after,
+.form input[type="checkbox"]:not(:checked) + label:after {
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 4px solid #797979;
+  border-bottom: 4px solid #797979;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.form input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+.form input[type="checkbox"]:checked + label:after {
+  opacity: 1;
 }
 
 .feedback {
@@ -959,6 +1022,14 @@ img {
   font-size: 450px;
 }
 
+.contacts__background_color {
+  width: 100vw;
+  height: 649px;
+  position: absolute;
+  margin-top: 256px;
+  background-color: #fab2234f;
+}
+
 .contacts__text-par {
   margin-bottom: 60px;
 }
@@ -972,7 +1043,6 @@ img {
   padding: 91px 0 0 291px;
   gap: 60px;
   height: 649px;
-  background-color: #fab2234f;
 }
 
 .contacts__container_info {
@@ -1137,31 +1207,6 @@ img {
   .tours__photo_container {
     right: 50px;
   }
-  .form {
-    flex-direction: column;
-    margin-top: 90px;
-    margin-bottom: 350px;
-  }
-  .form__wrap {
-    max-width: 100%;
-  }
-  .form__line {
-    margin-left: 10px;
-  }
-  .form__text {
-    left: 0;
-    text-align: center;
-    margin: 0 auto;
-    align-items: center;
-  }
-  .form__wrap_container {
-    width: 100%;
-  }
-  .form__logo {
-    position: absolute;
-    bottom: -608px;
-    left: 367px;
-  }
   .contacts__container {
     padding-left: 200px;
   }
@@ -1172,6 +1217,9 @@ img {
     left: -100px;
     font-size: 330px;
   }
+  .form__text-par {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -1181,7 +1229,7 @@ img {
     background-position: center;
     background-size: cover;
   }
-  .header__img-video {
+  .header__img_video {
     right: 30px;
   }
   .about {
@@ -1268,8 +1316,9 @@ img {
     margin-top: 29px;
   }
   .photos__background {
-    width: 768px;
+    width: 100vw;
     height: 421px;
+    left: 256px;
     top: 457px;
   }
   .photos__text {
@@ -1333,6 +1382,7 @@ img {
   .tours__background_color {
     z-index: -1;
     height: 360px;
+    right: 0;
   }
   .tours__text {
     align-items: center;
@@ -1359,12 +1409,14 @@ img {
     border: none;
   }
   .form {
+    flex-direction: column;
     margin-top: 45px;
     margin-bottom: 286px;
   }
   .form__wrap {
     background-color: rgba(250, 178, 35, 0.309804);
     height: 325px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -1372,6 +1424,9 @@ img {
     width: 400px;
     margin-top: -53px;
     background-color: rgba(250, 178, 35, 0);
+  }
+  .form__line {
+    margin-left: 10px;
   }
   .form__input {
     margin-bottom: 30px;
@@ -1384,11 +1439,23 @@ img {
     font-size: 28px;
     margin-top: 30px;
   }
+  .form__text {
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+  }
   .form__text-par {
     white-space: normal;
     margin-bottom: 100px;
   }
+  .form__wrap_container {
+    width: 100%;
+    align-items: center;
+    padding: 0;
+  }
   .form__logo {
+    position: absolute;
     left: 38%;
     bottom: -416px;
   }
@@ -1418,6 +1485,10 @@ img {
     top: 130px;
     left: -185px;
     text-align: center;
+  }
+  .contacts__background_color {
+    height: 400px;
+    margin-top: 347px;
   }
   .contacts__container {
     padding-left: 0;
@@ -1512,7 +1583,7 @@ img {
     margin-top: 50px;
     max-width: 700px;
   }
-  .header__img-video {
+  .header__img_video {
     width: 343px;
     height: 215px;
     top: 638px;
@@ -1520,7 +1591,8 @@ img {
   .header__img-play {
     width: 65px;
     height: 63px;
-    margin-top: 47px;
+    left: 139px;
+    top: 63px;
   }
   .header .text-title {
     font-size: 35px;
@@ -1550,6 +1622,9 @@ img {
   .hamburger-menu {
     display: block;
   }
+  #app-cover {
+    display: none;
+  }
   .header {
     display: flex;
     flex-direction: column;
@@ -1575,11 +1650,14 @@ img {
     font-size: 50px;
     margin-top: 0;
   }
-  .header__img-video {
+  .header__img_video {
     display: none;
   }
   .form__text-title {
     white-space: normal;
+  }
+  .contacts__background_color {
+    display: none;
   }
   .contacts__container {
     background-color: transparent;
@@ -1730,8 +1808,10 @@ img {
     display: block;
   }
   .photos__background {
+    width: 100vw;
     height: 179px;
-    top: 258px;
+    top: 254px;
+    left: 0;
   }
   .photos__text {
     margin: 0;
