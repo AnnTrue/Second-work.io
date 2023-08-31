@@ -71,9 +71,6 @@ display: table;
   box-sizing: border-box;
 }
 
-.button-cover {
-}
-
 .button-cover:before {
   counter-increment: button-counter;
   content: counter(button-counter);
